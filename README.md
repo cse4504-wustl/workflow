@@ -13,13 +13,15 @@ flowchart TD
     PR_Ind --> Review_Ind{Team Review}
     Review_Ind -- Approved --> Merge_Ind[Merge to 'feature_1']    
     Merge_Ind --> Pull[Pull Updated 'feature_1']
+    subgraph Integration Work (Team based)
     Pull --> Test[Run Integration Tests]
     Test --> Fix{Bugs Found?}
     Fix -- Yes --> FixCommit[Commit Fixes to 'feature_1']
     FixCommit --> Test
     Fix -- No --> FinalPR[Open PR to 'main']
-    
     FinalPR --> Review_Final{Final Review}
+    end
+
     Review_Final -- Approved --> MainMerge[Merge to 'main']
     MainMerge --> Done([Feature Complete])
 ```
