@@ -24,9 +24,9 @@ flowchart TD
     FixCommit --> Test
     Fix -- No --> FinalPR[Open PR to 'main']
     FinalPR --> Review_Final{Final Review}
+    Review_Final -- Approved --> MainMerge[Merge to 'main']
     end
 
-    Review_Final -- Approved --> MainMerge[Merge to 'main']
     MainMerge --> Done([Feature Complete])
 ```
 ```mermaid
