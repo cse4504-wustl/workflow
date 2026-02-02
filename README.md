@@ -9,6 +9,7 @@ flowchart TD
     BranchInd --> Implement[Implement Component]
     Implement --> PR_Ind[Open PR to 'feature_1']
     end
+    style Individual_Work fill:#679DC9
 
     subgraph Team Integration Work
     Review_Ind -- Changes Needed --> Implement
@@ -25,8 +26,6 @@ flowchart TD
 
     Review_Final -- Approved --> MainMerge[Merge to 'main']
     MainMerge --> Done([Feature Complete])
-
-    style Individual_Work fill:#679DC9
 ```
 ```mermaid
 gitGraph
