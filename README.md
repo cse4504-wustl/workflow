@@ -9,12 +9,12 @@ flowchart TD
     BranchInd --> Implement[Implement Component]
     Implement --> PR_Ind[Open PR to 'feature_1']
     end
+
+    subgraph Team Integration Work
     Review_Ind -- Changes Needed --> Implement
     PR_Ind --> Review_Ind{Team Review}
     Review_Ind -- Approved --> Merge_Ind[Merge to 'feature_1']    
     Merge_Ind --> Pull[Pull Updated 'feature_1']
-
-    subgraph Team Integration Work
     Pull --> Test[Run Integration Tests]
     Test --> Fix{Bugs Found?}
     Fix -- Yes --> FixCommit[Commit Fixes to 'feature_1']
