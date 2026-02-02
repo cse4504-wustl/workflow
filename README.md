@@ -25,6 +25,8 @@ flowchart TD
 
     Review_Final -- Approved --> MainMerge[Merge to 'main']
     MainMerge --> Done([Feature Complete])
+
+    style Individual_Development_Work fill:#679DC9
 ```
 ```mermaid
 gitGraph
