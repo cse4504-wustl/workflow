@@ -1,13 +1,16 @@
-# workflow
+# CSE 4504 Team Project GitHub Workflow
+
+During the development of this project, the following workflow will be used for each stage (feature). The diagram shows the workflow for feature_1. For each subsequent feature, the same workflow will be used (replacing feature_1 with a different feature number or name).
 ```mermaid
 flowchart TD
     Start([Start Project]) --> InitFeature[Create 'feature_1' branch from main]
     subgraph Team_Start [Team Design Work]
-    InitFeature --> Design[Design interfaces, commit & push to 'feature_1']
+    InitFeature --> Design[Design interfaces, commit and push to 'feature_1']
+    Design --> DivideTasks[Divide implementation work among teammates. Update README.md file with Work Assignment section, specifying individual implementation responsibilities.]
     end
 
     subgraph Indiv_Work [Individual Development Work]
-    Design --> BranchInd[Create individual task branch]
+    DivideTasks --> BranchInd[Create individual task branch]
     BranchInd --> Implement[Implement assigned components]
     Implement --> PR_Ind[Open PR from individual task branch to 'feature_1']
     end
@@ -28,29 +31,4 @@ flowchart TD
     end
 
     MainMerge --> Done([Feature Complete])
-```
-```mermaid
-gitGraph
-    commit id: "Initial Project"
-    branch feature_1
-    checkout feature_1
-    commit id: "Define Interfaces" type: HIGHLIGHT
-    
-    branch cli_dev
-    checkout cli_dev
-    commit id: "Impl CLI"
-    
-    checkout feature_1
-    branch ops_dev
-    checkout ops_dev
-    commit id: "Impl Operations"
-    
-    checkout feature_1
-    merge cli_dev id: "Merge CLI PR"
-    merge ops_dev id: "Merge Ops PR"
-    
-    commit id: "Fix Integration Bugs"
-    
-    checkout main
-    merge feature_1 id: "Final Release PR" tag: "v1.0"
 ```
