@@ -1,15 +1,15 @@
 # workflow
 ```mermaid
 flowchart TD
-    Start([Start Project]) --> InitFeature[Init 'feature_1' Branch]
+    Start([Start Project]) --> InitFeature[Create 'feature_1' branch from main]
     subgraph Team_Start [Team Design Work]
-    InitFeature --> Design[Design Interfaces & Push to 'feature_1']
+    InitFeature --> Design[Design interfaces, commit & push to 'feature_1']
     end
 
     subgraph Indiv_Work [Individual Development Work]
-    Design --> BranchInd[Create Individual Task Branch]
-    BranchInd --> Implement[Implement Component]
-    Implement --> PR_Ind[Open PR to 'feature_1']
+    Design --> BranchInd[Create individual task branch]
+    BranchInd --> Implement[Implement assigned components]
+    Implement --> PR_Ind[Open PR from individual task branch to 'feature_1']
     end
     style Indiv_Work fill:#96C9F2
 
@@ -17,12 +17,12 @@ flowchart TD
     Review_Ind -- Changes Needed --> Implement
     PR_Ind --> Review_Ind{Team Review}
     Review_Ind -- Approved --> Merge_Ind[Merge to 'feature_1']    
-    Merge_Ind --> Pull[Pull Updated 'feature_1']
-    Pull --> Test[Run Integration Tests]
+    Merge_Ind --> Pull[Pull updated 'feature_1']
+    Pull --> Test[Run integration tests]
     Test --> Fix{Bugs Found?}
-    Fix -- Yes --> FixCommit[Commit Fixes to 'feature_1']
+    Fix -- Yes --> FixCommit[Commit fixes to 'feature_1']
     FixCommit --> Test
-    Fix -- No --> FinalPR[Open PR to 'main']
+    Fix -- No --> FinalPR[Open PR from feature_1 to 'main']
     FinalPR --> Review_Final{Final Review}
     Review_Final -- Approved --> MainMerge[Merge to 'main']
     end
