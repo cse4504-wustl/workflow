@@ -4,10 +4,10 @@ flowchart TD
     Start([Start Project]) --> InitFeature[Init 'feature_1' Branch]
     subgraph Team_Start [Team Design Work]
     InitFeature --> Design[Design Interfaces & Push to 'feature_1']
-    Design --> BranchInd[Create Individual Task Branch]
     end
 
     subgraph Indiv_Work [Individual Development Work]
+    Design --> BranchInd[Create Individual Task Branch]
     BranchInd --> Implement[Implement Component]
     Implement --> PR_Ind[Open PR to 'feature_1']
     end
