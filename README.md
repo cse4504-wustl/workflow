@@ -5,11 +5,11 @@ flowchart TD
     InitFeature --> Design[Design Interfaces & Push to 'feature_1']
     Design --> BranchInd[Create Individual Task Branch]
 
-    subgraph Individual Work
+    subgraph Indiv_Work [Individual Work]
     BranchInd --> Implement[Implement Component]
     Implement --> PR_Ind[Open PR to 'feature_1']
     end
-    style Individual_Work fill:#679DC9
+    style Indiv_Work fill:#679DC9
 
     subgraph Team Integration Work
     Review_Ind -- Changes Needed --> Implement
