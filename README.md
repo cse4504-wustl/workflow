@@ -5,7 +5,7 @@ flowchart TD
     InitFeature --> Design[Design Interfaces & Push to 'feature_1']
     Design --> BranchInd[Create Individual Task Branch]
 
-    subgraph Individual Development Work
+    subgraph Individual Work
     BranchInd --> Implement[Implement Component]
     Implement --> PR_Ind[Open PR to 'feature_1']
     end
@@ -26,7 +26,7 @@ flowchart TD
     Review_Final -- Approved --> MainMerge[Merge to 'main']
     MainMerge --> Done([Feature Complete])
 
-    style Individual_Development_Work fill:#679DC9
+    style Individual_Work fill:#679DC9
 ```
 ```mermaid
 gitGraph
