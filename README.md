@@ -9,7 +9,7 @@ flowchart TD
     BranchInd --> Implement[Implement Component]
     Implement --> PR_Ind[Open PR to 'feature_1']
     end
-    style Indiv_Work fill:#679DC9
+    style Indiv_Work fill:#96C9F2
 
     subgraph Team Integration Work
     Review_Ind -- Changes Needed --> Implement
