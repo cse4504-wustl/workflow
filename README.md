@@ -1,4 +1,5 @@
 # workflow
+```mermaid
 flowchart TD
     Start([Start Project]) --> InitFeature[Init 'feature_1' Branch]
     InitFeature --> Design[Design Interfaces & Push to 'feature_1']
@@ -22,8 +23,8 @@ flowchart TD
     FinalPR --> Review_Final{Final Review}
     Review_Final -- Approved --> MainMerge[Merge to 'main']
     MainMerge --> Done([Feature Complete])
-
-
+```
+```mermaid
 gitGraph
     commit id: "Initial Project"
     branch feature_1
@@ -47,3 +48,4 @@ gitGraph
     
     checkout main
     merge feature_1 id: "Final Release PR" tag: "v1.0"
+```
