@@ -8,9 +8,8 @@ flowchart TD
     subgraph Individual Work
     BranchInd --> Implement[Implement Component]
     Implement --> PR_Ind[Open PR to 'feature_1']
-    Review_Ind -- Changes Needed --> Implement
     end
-
+    Review_Ind -- Changes Needed --> Implement
     PR_Ind --> Review_Ind{Team Review}
     Review_Ind -- Approved --> Merge_Ind[Merge to 'feature_1']    
     Merge_Ind --> Pull[Pull Updated 'feature_1']
