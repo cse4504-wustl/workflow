@@ -6,17 +6,20 @@ During the development of this project, the following workflow will be used for 
 flowchart TD
  
     Start([Start Project]) --> Design[In class design in a feature branch]
-    Design --> Implement[Out of class implementation of your assigned part]
+    style Start fill:#ED7A6D
+    Design --> Implement[Implement your part in YOUR branch made from feature branch]
+    Style Design fill:#FFFEC4
     Implement --> Review[In class review of your work]
     style Implement fill:#96C9F2
-    Review -- Approved --> Merge_Ind[Merge individual branch to feature branch]
+    Review -- Approved --> Merge_Ind[Merge YOUR branch to feature branch]
     Review -- Changes Needed --> Implement
-    Merge_Ind --> IntegrationTest[Test with everyone's changes merged in]
+    Merge_Ind --> IntegrationTest[Test feature branch]
     IntegrationTest -- Pass --> MergeMain
     IntegrationTest -- Fail --> Fix[Implement fixes in feature branch]
     Fix --> IntegrationTest
  
     MergeMain --> Done([Feature Complete])
+    style Done fill:#93DBB8
 ```
 
 ```mermaid
