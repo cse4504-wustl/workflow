@@ -20,8 +20,9 @@ flowchart TD
     IntegrationTest -- Pass --> MergeMain
     IntegrationTest -- Fail --> Fix[Implement fixes in feature branch]
     Fix --> IntegrationTest
- 
+    style Fix fill:#96C9F2
     MergeMain --> Done([Feature Complete])
+    style MergeMain fill:#FFFEC4
     style Done fill:#93DBB8
 ```
 
