@@ -8,7 +8,7 @@ flowchart TD
     Start([Start Project]) --> Design[In class design in a feature branch]
     style Start fill:#ED7A6D
     Design --> Implement[Implement your part in YOUR branch made from feature branch]
-    Style Design fill:#FFFEC4
+    style Design fill:#FFFEC4
     Implement --> Review[In class review of your work]
     style Implement fill:#96C9F2
     Review -- Approved --> Merge_Ind[Merge YOUR branch to feature branch]
