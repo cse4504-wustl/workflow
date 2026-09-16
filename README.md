@@ -26,11 +26,11 @@ flowchart TD
 ```
 The diagram below shows a git branches that you would typically have to complete a feature:
 ```mermaid
-%%{init: {'gitGraph': {'mainBranchName': 'main'}}}%%
+%%{init: {'gitGraph': {'mainBranchName': 'main'}, 'themeVariables': {'fontSize': '12px'}}}%%
 gitGraph
     commit id: "Initial"
-    branch feature
-    checkout feature
+    branch feature_X
+    checkout feature_X
     commit id: "Design in feature branch"
 
     branch person1
@@ -38,19 +38,19 @@ gitGraph
     commit id: "P1: implement"
     commit id: "P1: revise after review"
 
-    checkout feature
+    checkout feature_X
     branch person2
     checkout person2
     commit id: "P2: implement"
     commit id: "P2: revise after review"
 
-    checkout feature
+    checkout feature_X
     branch person3
     checkout person3
     commit id: "P3: implement"
     commit id: "P3: revise after review"
 
-    checkout feature
+    checkout feature_X
     merge person1 id: "Merge P1 branch"
     merge person2 id: "Merge P2 branch"
     merge person3 id: "Merge P3 branch"
