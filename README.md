@@ -59,5 +59,5 @@ gitGraph
     commit id: "Integration test - pass"
 
     checkout main
-    merge feature id: "Feature complete"
+    merge feature_X id: "Feature complete"
 ```
