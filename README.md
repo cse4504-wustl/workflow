@@ -26,7 +26,7 @@ flowchart TD
 ```
 The diagram below shows a git branches that you would typically have to complete a feature:
 ```mermaid
-%%{init: {'gitGraph': {'mainBranchName': 'main'}, 'themeVariables': {'fontSize': '12px'}}}%%
+%%{init: {'gitGraph': {'mainBranchName': 'main'}}}%%
 gitGraph
     commit id: "Initial"
     branch feature_X
