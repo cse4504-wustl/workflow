@@ -2,6 +2,24 @@
 
 During the development of this project, the following workflow will be used for each stage (feature). The diagram shows the workflow for feature_1. For each subsequent feature, the same workflow will be used (replacing feature_1 with a different feature number or name).
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 25, 'htmlLabels': false}, 'themeVariables': {'fontSize': '12px'}}}%%
+flowchart TD
+ 
+    Start([Start Project]) --> Design[In class design in a feature branch]
+    Design --> Implement[Out of class implementation of your assigned part]
+    Implement --> Review[In class review of your work]
+    style Implement fill:#96C9F2
+    Review -- Approved --> Merge_Ind[Merge individual branch to feature branch]
+    Review -- Changes Needed --> Implement
+    Merge_Ind --> IntegrationTest[Test with everyone's changes merged in]
+    IntegrationTest -- Pass --> MergeMain
+    IntegrationTest -- Fail --> Fix[Implement fixes in feature branch]
+    Fix --> IntegrationTest
+ 
+    MergeMain --> Done([Feature Complete])
+```
+
+```mermaid
 flowchart TD
     Start([Start Project]) --> InitFeature[Create 'feature_1' branch from main]
     subgraph Team_Start [Team Design Work]
