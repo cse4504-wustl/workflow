@@ -6,7 +6,6 @@ During the development of this project, the following workflow will be used for 
 flowchart TD
  
     Start([Start Project]) --> Design[In class design in a feature branch]
-    style Start fill:#ED7A6D
     Design --> Implement[Implement your part in YOUR branch made from feature branch]
     style Design fill:#FFFEC4
     Implement --> Review[In class review of your work]
