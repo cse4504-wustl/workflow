@@ -12,8 +12,11 @@ flowchart TD
     Implement --> Review[In class review of your work]
     style Implement fill:#96C9F2
     Review -- Approved --> Merge_Ind[Merge YOUR branch to feature branch]
+    style Review fill:#FFFEC4
     Review -- Changes Needed --> Implement
     Merge_Ind --> IntegrationTest[Test feature branch]
+    style Merge_Ind fill:#FFFEC4
+    style IntegrationTest fill:#FFFEC4
     IntegrationTest -- Pass --> MergeMain
     IntegrationTest -- Fail --> Fix[Implement fixes in feature branch]
     Fix --> IntegrationTest
