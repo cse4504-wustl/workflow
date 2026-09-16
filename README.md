@@ -24,3 +24,40 @@ flowchart TD
     style MergeMain fill:#FFFEC4
     style Done fill:#93DBB8
 ```
+The diagram below shows a git branches that you would typically have to complete a feature:
+```mermaid
+%%{init: {'gitGraph': {'mainBranchName': 'main'}}}%%
+gitGraph
+    commit id: "Initial"
+    branch feature
+    checkout feature
+    commit id: "Design in feature branch"
+
+    branch person1
+    checkout person1
+    commit id: "P1: implement"
+    commit id: "P1: revise after review"
+
+    checkout feature
+    branch person2
+    checkout person2
+    commit id: "P2: implement"
+    commit id: "P2: revise after review"
+
+    checkout feature
+    branch person3
+    checkout person3
+    commit id: "P3: implement"
+    commit id: "P3: revise after review"
+
+    checkout feature
+    merge person1 id: "Merge P1 branch"
+    merge person2 id: "Merge P2 branch"
+    merge person3 id: "Merge P3 branch"
+    commit id: "Integration test - fail"
+    commit id: "Fix issue"
+    commit id: "Integration test - pass"
+
+    checkout main
+    merge feature id: "Feature complete"
+```
