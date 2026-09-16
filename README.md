@@ -16,7 +16,7 @@ flowchart TD
     Merge_Ind --> IntegrationTest[Test feature branch]
     style Merge_Ind fill:#FFFEC4
     style IntegrationTest fill:#FFFEC4
-    IntegrationTest -- Pass --> MergeMain
+    IntegrationTest -- Pass --> MergeMain[Merge feature branch to main]
     IntegrationTest -- Fail --> Fix[Implement fixes in feature branch]
     Fix --> IntegrationTest
     style Fix fill:#96C9F2
